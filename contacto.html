@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto </title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-image: url('https://source.unsplash.com/1600x900/?microphone,stage');
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="experiencia.html">Proyecto</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <div class="section">
+    <h2>Contacto</h2>
+
+    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem; max-width: 400px; margin: auto;">
+      <div>
+        <label for="name">Nombre completo:</label><br>
+        <input type="text" id="name" placeholder="Nombre completo" required style="width: 100%;">
+      </div>
+
+      <div>
+        <label  for="phone">Celular:</label><br>
+        <input type="tel" id="phone" placeholder="Celular" required style="width: 100%;">
+      </div>
+
+      <div>
+        <label for="place">Lugar del evento:</label><br>
+        <input type="text" id="place" placeholder="Lugar del evento" required style="width: 100%;">
+      </div>
+
+      <div>
+        <label for="time">Hora del evento:</label><br>
+        <input type="time" id="time" required style="width: 100%;">
+      </div>
+
+      <div>
+        <label for="date">Fecha del evento:</label><br>
+        <input type="date" id="date" required style="width: 100%;">
+      </div>
+
+      <div>
+        <label for="duration">Duración del evento:</label><br>
+        <input type="text" id="duration" placeholder="Ej: 2 horas" required style="width: 100%;">
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    
+    <p id="mensaje" style="margin-top: 1rem; font-weight: bold; text-align: center; color: green;"></p>
+  </div>
+
+  <script>
+    
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault(); 
+      document.getElementById('mensaje').textContent = 'Gracias por tenernos en cuenta.';
+      this.reset(); 
+    });
+  </script>
+
+</body>
+<footer class="site-footer">
+  <p>© 2025 Todos los derechos reservados | Contacto: 300 4146829</p>
+</footer>
+
+</html>
